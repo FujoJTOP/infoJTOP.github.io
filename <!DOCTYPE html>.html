@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JTOP Website</title>
+    <style>
+   /* 默认浅色模式样式 */
+  :root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+  }
+
+  /* 深色模式样式 */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #121212;
+      --text-color: #ffffff;
+    }
+  }
+
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  h1 {
+    text-align: center;
+    padding: 10px;
+  }
+
+  p {
+    padding: 10px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* 设置容器高度为视口高度，使图片在所有设备上都居中 */
+    margin-bottom: 20px; /* 为其他元素留出一些空间 */
+  }
+
+  img {
+    max-width: 50%; /* 设置图片最大宽度，使其自适应容器宽度 */
+    height: auto; /* 这里设置图片的高度为自动，意味着图片的高度会根据其原始尺寸进行调整 */
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column; /* 设置flex-direction为column，使按钮垂直排列 */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1px; /* 设置按钮与logo图片的间距为10px */
+  }
+
+  button {
+    display: none; /* 隐藏按钮 */
+  }
+
+  .button-container input[type="image"] {
+    width: 200px; /* 设置图片宽度 */
+    height: 60px; /* 设置图片高度 */
+    margin-bottom: 5px;
+    transition: transform 0.3s ease; /* 设置图片切换的过渡效果 */
+  }
+
+  .button-container input[type="image"]:hover {
+    transform: scale(1.2); /* 鼠标悬停时，图片放大到原来的1.2倍 */
+  }
+</style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="./PNG/WechatIMG474.jpg" alt="My Image">
+    </div>
+    <div class="button-container">
+        <input type="image" src="./PNG/官方网站.png" alt="Button 1">
+        <input type="image" src="./PNG/开源信息.png" alt="Button 2">
+        <input type="image" src="./PNG/意见反馈.png" alt="Button 3">
+    </div>
+</body>
+</html>
